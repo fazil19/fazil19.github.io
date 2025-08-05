@@ -1,10 +1,12 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>One Page Profile</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
   <style>
     body {
       font-family: 'Roboto', sans-serif;
@@ -20,10 +22,12 @@
     .profile-header h1 {
       font-weight: 700;
       margin-bottom: 10px;
+      animation: fadeInDown 1s ease-in-out;
     }
     .profile-header p {
       font-weight: 300;
       font-size: 18px;
+      animation: fadeInUp 1.2s ease-in-out;
     }
     .section {
       padding: 40px 20px;
@@ -35,7 +39,12 @@
     }
     .card {
       border: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
     }
     footer {
       background-color: #eee;
@@ -44,33 +53,47 @@
       font-size: 14px;
       color: #555;
     }
+    a {
+      color: #673ab7;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
-<body>  <header class="profile-header">
+<body>
+  <header class="profile-header">
     <h1>Fazil</h1>
     <p>Backend Developer | Microservices Expert | System Architect</p>
-  </header>  <section class="section">
+  </header>
+
+  <section class="section" data-aos="fade-up">
     <div class="container">
       <h2 class="section-title">About Me</h2>
-      <p>I am a passionate backend developer with 6+ years of experience in building scalable and efficient server-side applications. I specialize in Java 17, Spring Boot, and Node.js, and have deep expertise in designing microservices architectures. My experience also includes working with Kafka, RabbitMQ, and MongoDB to ensure robust data streaming and storage solutions.</p>
+      <p>
+        I am a passionate backend developer with 6+ years of experience in building scalable and efficient server-side applications. I specialize in Java 17, Spring Boot, and Node.js, and have deep expertise in designing microservices architectures. My experience also includes working with Kafka, RabbitMQ, and MongoDB to ensure robust data streaming and storage solutions.
+      </p>
     </div>
-  </section>  <section class="section bg-light">
+  </section>
+
+  <section class="section bg-light" data-aos="fade-up">
     <div class="container">
       <h2 class="section-title">Skills</h2>
       <div class="row">
-        <div class="col-md-4 mb-3">
+        <div class="col-md-4 mb-3" data-aos="zoom-in">
           <div class="card p-3">
             <h5>Java & Spring Boot</h5>
             <p>Java 17, Spring MVC, Spring Data, Spring Security, REST APIs</p>
           </div>
         </div>
-        <div class="col-md-4 mb-3">
+        <div class="col-md-4 mb-3" data-aos="zoom-in" data-aos-delay="100">
           <div class="card p-3">
             <h5>Microservices & Messaging</h5>
             <p>Microservices architecture, Kafka, RabbitMQ, service orchestration</p>
           </div>
         </div>
-        <div class="col-md-4 mb-3">
+        <div class="col-md-4 mb-3" data-aos="zoom-in" data-aos-delay="200">
           <div class="card p-3">
             <h5>Node.js & Databases</h5>
             <p>Node.js APIs, MongoDB, SQL/NoSQL, performance optimization</p>
@@ -78,7 +101,9 @@
         </div>
       </div>
     </div>
-  </section>  <section class="section">
+  </section>
+
+  <section class="section" data-aos="fade-up">
     <div class="container">
       <h2 class="section-title">Projects</h2>
       <ul>
@@ -87,14 +112,25 @@
         <li><strong>API Gateway & Authentication:</strong> Implemented secure backend layers with Java 17 and Spring Security.</li>
       </ul>
     </div>
-  </section>  <section class="section bg-light">
+  </section>
+
+  <section class="section bg-light" data-aos="fade-up">
     <div class="container">
       <h2 class="section-title">Contact</h2>
-      <p><strong>Email:</strong> fazil@example.com</p>
-      <p><strong>Phone:</strong> +91 00000 00000</p>
-      <p><strong>LinkedIn:</strong> linkedin.com/in/</p>
+      <p><strong>Email:</strong> <a href="mailto:fazil@example.com">fazil@example.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+910000000000">+91 00000 00000</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/" target="_blank">linkedin.com/in/</a></p>
     </div>
-  </section>  <footer>
-    &copy; 2025 John Doe. All rights reserved.
-  </footer></body>
+  </section>
+
+  <footer>
+    &copy; 2025. All rights reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
 </html>
