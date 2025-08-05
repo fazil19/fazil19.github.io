@@ -1,1072 +1,126 @@
-82'<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Template</title>
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="css/scrolling-nav.css" rel="stylesheet">
-    <!--font awesome-->
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <!--google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-    <!--Light box-->
-    <link href="lightbox/dist/css/lightbox.css" rel="stylesheet">
-    <link href="lightbox/dist/css/lightbox.min.css" rel="stylesheet">
-    <!--<link href="css/main.css" rel="stylesheet">-->
-   
-    <style>
-      /*carousel */
-      .carousel-inner > .item > img,
-      .carousel-inner > .item > a > img {
-        width:1350px;
-        margin: auto;
-      }
-      .carousel-indicators li{
-        background-color:#ffffff; 
-      }
-      .carousel-indicators .active{
-        background-color:#00e0d0; 
-      }
-      @media screen and (max-width: 1020px) {
-        .carousel-caption1 {
-          display: none;
-        }
-      }
-      /*navbar */
-      .navbar {
-        margin-bottom: 0;
-        background-color: #3b2f61;*/
-        background-color: transparent;
-        z-index: 9999;
-        padding-bottom: 16px;
-        border: 0;
-        font-size: 13px !important;
-        line-height: 1.2 !important;
-        letter-spacing: 4px;
-        border-radius:0;
-        font-family: "Roboto";
-      }
-      .navbar-brand{
-        padding-left: 70px;
-        padding-top: 10px;
-      }
-      @media screen and (max-width: 870px) {
-        .navbar-brand {
-          padding-left: 18px;
-        }
-      }
-      .navbar li a, .navbar{
-        letter-spacing: 1px;
-        padding-bottom: 2px;
-        color: #ffffff !important;
-      }
-      @media screen and (max-width: 870px) {
-        .navbar li a{
-          font-size: 12px;
-        }
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Page Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
 
+    .profile-header {
+      background-color: #673ab7;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
 
-      /* ,.navbar-nav li.active a*/
-      .navbar-nav li a:hover{
-        color: #00e0d0 !important;
-        /*background-color: #382e5c !important;*/
-      }
+    .profile-header h1 {
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
 
-      .navbar-nav li.active a{
-        color: #00e0d0 !important;
-        background-color: #3b2f61 !important;
-      }
+    .profile-header p {
+      font-weight: 300;
+      font-size: 18px;
+    }
 
+    .section {
+      padding: 40px 20px;
+    }
 
-      /*buttons*/
-      .button2 {
-        background-color: white;
-        color: #77eee6;
-        border: 2px solid #77eee6;
-        border-radius: 0;
-      }
-      .button3 {
-        background-color: Transparent;
-        color: #77eee6;
-        border: 2px solid #77eee6;
-        border-radius: 0;
-      } 
+    .section-title {
+      font-weight: 700;
+      color: #673ab7;
+      margin-bottom: 20px;
+    }
 
+    .card {
+      border: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
 
-      /*removed */
-      .slideanim> .col-sm-4> .glyphicon {
-        font-size: 50px;
-        margin-bottom: 10px;
-        color: #00e0d0;
-      }
-      .col-sm-4:not(:last-child) {
-        border-right: 1px solid #ccc;
-      }
+    footer {
+      background-color: #eee;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
 
+<body>
 
-      /*light box picture */
-      .ourwrk> .row> .col-sm-6> img {
-        filter: grayscale(100%);
-      }
-      .ourwrk> .row> .col-sm-6> img:hover {
-        filter: grayscale(0%);
-      }
+  <header class="profile-header">
+    <h1>John Doe</h1>
+    <p>Web Developer | UI/UX Designer | Creative Thinker</p>
+  </header>
 
-
-      /*light box picture */
-      .row.no-gutter {blur(10px)
-
-      }
-
-      .row.no-gutter [class*='col-']:not(:first-child),
-      .row.no-gutter [class*='col-']:not(:last-child) {
-        padding-right: 0;
-        padding-left: 0;
-      }
-      
-      /*MEET OUR AMAZING TEAM*/
-      .row > .col-sm-3 >.thumbnail {
-        padding:0 0 15px 0;
-        border-radius: 0;
-      } 
-
-    /*MEET OUR AMAZING TEAM*/
-      @media screen and (max-width: 768px) {
-        .edivider1111>.row11 {
-          padding: auto !important;
-         
-        }
-      }  
-
-      /*meet our amazing team*/
-      /*thumnail and text responsive*/
-      @media screen and (min-width: 1081px) {
-        .row11 {
-          padding-left: 200px; 
-          padding-right: 200px;
-        }
-      }
-      @media  screen and (min-width: 768px ) {
-        .row11{
-          padding-left: 200px; 
-          padding-right: 200px;
-        }
-      }
-      @media screen and (min-width: 895px) and (max-width: 1074px) {
-        .tm3,.tm4{
-          font-size: 10pt;
-        }
-      }
-      @media screen and (min-width: 838px) and (max-width: 894px) {
-        .row11{
-          padding-left: 150px; 
-          padding-right: 150px;
-        }
-      }
-      @media screen and (min-width: 838px) and (max-width: 894px) {
-        .tm3,.tm4{
-          font-size: 9pt;
-        }
-      }
-      @media screen and (min-width: 768px) and (max-width: 837px) {
-        .row11{
-          padding-left: 150px; 
-          padding-right: 150px;
-        }
-      }
-      @media screen and (min-width: 768px) and (max-width: 837px) {
-        .tm3,.tm4{
-          font-size: 9pt;
-        }
-      }
-      @media screen and (min-width: 674px) and (max-width: 767px) {
-        .row11 {
-          padding-left: 170px;
-          padding-right: 170px;
-        }
-      } 
-      @media screen and (min-width: 625px) and (max-width: 673px) {
-        .row11 {
-          padding-left: 140px;
-          padding-right: 140px;
-        }
-      }
-      @media screen and (min-width:544px) and (max-width: 624px) {
-        .row11 {
-          padding-left: 120px;
-          padding-right: 120px;
-        }
-      } 
-      @media screen and (min-width:420px) and (max-width: 543px) {
-        .row11 {
-          padding-left: 100px;
-          padding-right: 100px;
-        }
-      }   
-      @media screen and (max-width: 420px) {
-        .row11 {
-          padding-left: 50px;
-          padding-right: 50px;
-        }
-      }
-
-    /*MEET OUR AMZING TEAM*/
-      @media screen and (min-width: 768px){
-        .bgovr11{
-          background-image:url(imags/team/team.png);
-          background-repeat: no-repeat;
-          width: 100%;
-          height: auto;
-        }
-      }
-      @media screen and (max-width: 768px){
-        .bgovr11{
-          background-color: #382b5f;
-        }
-      }
-      /*our works */
-      .thumbnail{
-        background:transparent;
-      }
-      .thumbnail1{
-        border: 0px;
-      }
-
-      /* light box */
-      .lightbox{
-        padding-top: 200px;
-        overflow: hidden;
-      }
-      .lightboxOverlay{
-        opacity: 0.9;
-      }
-
-      /*expertise heading */
-      .edivider{
-        border-bottom: 2px solid #ccc;
-        width: 6%;
-        margin: auto;
-      }
-
-
-      /*expertise divider:icons */
-      .exdivider{
-        border-bottom: 1px solid #ccc;
-        margin: auto;
-      }
-      @media screen and (max-width: 768px) {
-        .exdivider {
-          display: none;
-        }
-      }
-
-
-      /*carousel divider*/
-      .cdivider{
-        border-bottom: 2px solid #ccc;
-        border-bottom-color:#77eee6;
-        width: 6%;
-        margin: auto;
-      } 
-
-      /*testimonials*/
-      /*carousel */
-      .carousel-inner111 > .item > img,
-      .carousel-inner11 > .item > a > img {
-        width:1400px;
-        margin: auto;
-      }
-      .caption1{
-        text-align: center;
-        max-width: 100%;
-      }
-      .carousel-indicators1 li{
-        background-color:#ffffff; 
-      }
-      .carousel-indicators1 .active{
-        background-color:#3b2f61; 
-      }
-
-      /* feedback */
-      .contacts11{
-        padding-left: 180px;
-        padding-right: 70px;
-      }
-      @media screen and (max-width: 1325px) {
-        .contacts11 {
-          padding-left: 10px;
-          padding-right: 0px;
-        }
-      }
-
-
-      /*thumnail :our partners */
-      .thumblogo{
-        border:0px;
-      }
-
-       /*video */
-      .playpause {
-        background-image:url(imags/overly.png);
-        opacity: 0.811;
-        background-repeat:no-repeat;
-        width:100%;
-        height:100%;
-        position:absolute;
-        background-size:contain;
-        background-position: center;
-      }
-
-      @media screen and (min-width: 768px){
-        footer{
-          background-image: url(imags/footer.png);
-          background-repeat:no-repeat;
-          width: 100%;
-          height: auto;
-        }
-      } 
-      @media screen and (max-width: 767px){
-        footer{
-          background-color: #372d5b;
-        }
-      }
-      
-
-      /*font style*/
-      /*carousel*/
-      .cr1{
-        font-family: "PlayfairDisplay",serif;
-        color: rgb(255, 255, 255);
-        line-height: 1.2;
-      }
-      .cr2{
-        font-family: "Roboto",sans-serif;
-        color: rgb(255, 255, 255);
-        line-height: 1.714;
-      }
-      /*our story*/
-      .os1{
-        font-family: "PlayfairDisplay",serif;
-        color: rgb(65, 61, 75);
-        font-weight: bold;
-        line-height: 1.2;
-      }
-      .os2{
-        font-family: "Roboto",sans-serif;
-        color: rgba(65, 61, 75, 0.749);
-        line-height: 1.571;
-      }
-      /*expertise*/
-      .ex1{
-        font-family: "PlayfairDisplay",serif;
-        color: rgb(65, 61, 75);
-        font-weight: bold;
-        line-height: 1.2;
-      }
-      .ex2{
-        font-family: "PlayfairDisplay",serif;
-        color: rgba(47, 45, 53, 0.749);
-        line-height: 1.2;
-      }
-      .ex3{
-        font-family: "Roboto",sans-serif;
-        font-weight: bold;
-        color: rgb(65, 61, 75);
-        line-height: 1.2;
-      }
-      .ex4{
-        font-family: "Roboto",sans-serif;
-        color: rgba(51, 51, 51, 0.749);
-        line-height: 1.571;
-      }
-      /*team*/
-      .tm1{
-        font-family: "PlayfairDisplay",serif;
-        color: rgb(255, 255, 255);
-        font-weight: bold;
-        line-height: 1.2;
-      }
-      .tm2{
-        font-family: "PlayfairDisplay",serif;
-        color: rgb(249, 249, 249);
-        line-height: 1.2;
-      }
-      .tm3{
-        font-family: "Roboto",sans-serif;
-        color: rgb(255, 255, 255);
-        line-height: 1.2;
-      }
-      .tm4{
-        font-family: "Roboto",sans-serif;
-        color: rgba(250, 250, 250, 0.702);
-        line-height: 1.2;
-      }
-      .tm5{
-        font-family: "Roboto",sans-serif;
-        color: rgb(243, 243, 243);
-        line-height: 1.2; 
-      }
-      /*our work*/
-      .ow1{
-        font-family: "PlayfairDisplay",serif;
-        color: rgb(65, 61, 75);
-        font-weight: bold;
-        line-height: 1.2;
-      }
-      .ow2{
-        font-family: "Roboto",sans-serif;
-        color: rgb(65, 61, 75); 
-        line-height: 0.2;
-      }
-      /*testimonials*/
-      .tns1{
-        font-size: 100px;
-        font-family: "PlayfairDisplay",serif;
-        color: rgba(255, 255, 255, 0.902);
-        line-height: 0.22;
-        transform: translateY(-50%);
-      }
-      .tns2{
-        font-size: 16px;
-        font-family: "PlayfairDisplay",serif;
-        color: rgba(255, 255, 255, 0.851);
-        line-height: 1.625
-        transform: translateY(-50%);
-      }
-      .tns3{
-        font-size: 14px;
-        font-family: "Roboto",sans-serif;
-        color: rgb(255, 255, 255);
-        line-height: 1.571;
-        transform: translateY(-50%);
-      }
-      .tns4{
-        font-size: 13px;
-        font-family: "Roboto",sans-serif;
-        color: rgba(255, 255, 255, 0.702);
-        line-height: 1.692;
-        transform: translateY(-50%);
-      }
-      /*contacts*/
-      .ct1{
-        font-family: "PlayfairDisplay",serif;
-        color: rgb(65, 61, 75);
-        font-weight: bold;
-        line-height: 1.2;
-      }
-      /*footer*/
-      .ft1{
-        color: rgb(255, 255, 255);
-        line-height: 1.733;
-      }
-      .ft2{
-
-          color: rgb(255, 255, 255);         
-      }
-      .ft3{
-        color: rgb(255, 255, 255);
-        
-      }
-      .ft4{
-        color: rgb(255, 255, 255);
-        font-size: 14px;
-      }
-      .ft5{
-        font-size: 14px;
-        color: rgb(255, 255, 255);
-        line-height: 1.857;
-      }
-      .ft6{
-        font-size: 14px;
-        color: rgb(255, 255, 255);
-        line-height: 1.857;
-        text-align: right;
-      }
-
-      /*footer*/
-      .form-control1{
-        background-color : transparent;
-        border-radius: 0px;
-        width: 209px;
-      }
-      .fa-circle{
-        border: 11px #ffffff;
-      }
-
-    </style>
-
-  </head>
-  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-    <!--Header-->
-    <nav class="navbar navbar-inverse navbar-fixed-top" style="border-radius: 0px !important; margin-bottom:0px ">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand page-scroll" href="#myPage">
-              <img src="imags/logo.png"> 
-            </a>
-          </div>
-
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div id="navbar3" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li>
-                <a class="page-scroll" href="#myPage">HOME <span class="sr-only"></span></a>
-              </li>
-              <li>
-                <a class="page-scroll" href="#ourStory">ABOUT</a></li>
-              </li>
-              <li>
-                <a class="page-scroll" href="#expertise">EXPERTISE</a></li>
-              </li>
-              <li>
-                <a class="page-scroll" href="#teams">TEAMS</a></li>
-              </li>
-              <li>
-                <a class="page-scroll" href="#ourWork">WORKS</a></li>
-              </li>
-              <!-- <li>
-                <a class="page-scroll" href="#testimonials">PEOPLE SAY</a></li>
-              </li> -->
-              <li>
-                <a class="page-scroll" href="#contact">CONTACT</a></li>
-              </li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
-   <!--End Header-->
-
-    <!-- Slide Show -->
-    <!--<br><br>-->
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-      </ol>
-
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <img src="imags/carousel/imag11.png" alt="img1" width="660" height="345">
-          <div class="carousel-caption carousel-caption1">
-            <h2><strong class="cr1">We Are Awesome Creative Agenct</strong></h2>
-            <div class="cdivider"></div><br>
-            <p class="cr2">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. lorem <br>
-                   quis bibendum auctor, nisi elit consequat ipsum,id elit. Duis sed odio sit amet nibh <br> 
-                                    vulputate cursus a sit amet mauris.ipsum velit.</p>
-            <br><br>
-            <button type="button" class="btn btn-primary btn-lg button1 button3"><b>LEARN MORE</b></button><br><br><br><br>
-          </div>
-        </div>
-        <div class="item ">
-          <img src="imags/carousel/flowr1.jpg" alt="img2" width="660" height="345">
-          <div class="carousel-caption carousel-caption1">
-            <h2><strong class="cr1">We Are Awesome Creative Agenct</strong></h2>
-            <div class="cdivider"></div><br>
-            <p class="cr2">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. lorem <br>
-                   quis bibendum auctor, nisi elit consequat ipsum,id elit. Duis sed odio sit amet nibh <br> 
-                                    vulputate cursus a sit amet mauris.ipsum velit.</p>
-            <br><br>
-            <button type="button" class="btn btn-primary btn-lg button1 button3"><b>LEARN MORE</b></button><br><br><br><br>
-          </div>
-        </div>
-        <div class="item ">
-          <img src="imags/carousel/imag11.png" alt="img1" width="660" height="345">
-          <div class="carousel-caption carousel-caption1">
-            <h2><strong class="cr1">We Are Awesome Creative Agenct</strong></h2>
-            <div class="cdivider"></div><br>
-            <p class="cr2">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. lorem <br>
-                   quis bibendum auctor, nisi elit consequat ipsum,id elit. Duis sed odio sit amet nibh <br> 
-                                    vulputate cursus a sit amet mauris.ipsum velit.</p>
-            <br><br>
-            <button type="button" class="btn btn-primary btn-lg button1 button3"><b>LEARN MORE</b></button><br><br><br><br>
-          </div>
-        </div>
-        <div class="item ">
-          <img src="imags/carousel/flowr1.jpg" alt="img2" width="660" height="345">
-          <div class="carousel-caption carousel-caption1">
-            <h2><strong class="cr1">We Are Awesome Creative Agenct</strong></h2>
-            <div class="cdivider"></div><br>
-            <p class="cr2">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. lorem <br>
-                   quis bibendum auctor, nisi elit consequat ipsum,id elit. Duis sed odio sit amet nibh <br> 
-                                    vulputate cursus a sit amet mauris.ipsum velit.</p>
-            <br><br>
-            <button type="button" class="btn btn-primary btn-lg button1 button3"><b>LEARN MORE</b></button><br><br><br><br>
-          </div>
-        </div>
-      </div>
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p>I am a passionate web developer with 5+ years of experience building modern, user-friendly websites and
+        applications. I specialize in front-end development and have a keen eye for design and usability.</p>
     </div>
+  </section>
 
-
-
-
-    <!--about-->
-    <div id="ourStory" class="container-fluid" > 
-      <br><br><br>      
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
       <div class="row">
-        <div class="col-sm-6">
-          <a class="thumbnail thumbnail1">
-            <img src="imags/img1.png" alt="img1" class="img-responsive">
-          </a>
-        </div>
-        <div class="col-sm-6">
-          <div style="text-align:left">
-            <h3 class="os1">OUR STORY</h3>
-          </div>
-          <p class="os2">This is Photoshop's version  of Lorem Ipsum.
-                         Proin gravida nibh vel velit auctor aliquet. 
-                         Aenean sollicitudin, lorem quis bibendum auctor, 
-                         nisi elit consequat ipsum, nec sagittis sem nibh 
-                         id elit. Duis sed odio sit amet nibh vulputate cursus<br><br>
-
-                         Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt 
-                         auctor a ornare odio.  Sed non  mauris vitae erat 
-                         consequat auctor eu in elit. Class aptent taciti 
-                         sociosqu ad litora torquent per conubia nostra, 
-                         per inceptos himenaeos.
-          </p><br>
-          <button type="button" class="btn btn-primary btn-lg button1 button2"><b>LEARN MORE</b></button><br>
-        </div>
-      </div>
-      <br><br>
-      <!--<div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="imags/moana.mp4" allowfullscreen &autoStart=false></iframe>
-      </div> 
-      <div align="center" class="container-fluid embed-responsive embed-responsive-16by9" >
-        <video controls poster="imags/video.png" class="embed-responsive-item">
-            <source src="imags/moana.mp4" type="video/mp4">
-        </video>
-      </div>-->
-      <div class="embed-responsive embed-responsive-16by9">
-        <video class="video">
-          <source src="imags/moana.mp4" type="video/mp4" />
-        </video>
-          <div class="playpause">
-          </div>
-      </div>
-    </div>
-
-
-
-
-
-    <!--EXPERTISE-->
-    <!-- Container (Services Section) -->
-    <div id="expertise" class="container-fluid text-center">
-    <br><br><br>
-      <h3 class="ex1">EXPERTISE</h3>
-      <h4 class="ex2">Lorem ipsum dolor sit amet proin gravida nibh vel velit</h4>
-      <br>
-      <div class="edivider"></div>
-      <br><br>
-      <div class="row slideanim">
-        <div class="col-sm-4">
-          <!--<span class="glyphicon glyphicon-blackboard"></span>-->
-          <img src="imags/expertise/1.png">
-            <h4 class="ex3">WEB DESIGN</h4>
-              <p class="ex4">This is Photoshop's version of lorem<br>
-                 Ipsum. Proin gravida nibh vel velit<br>
-                 auctor aliquet Aenean </p>
-        </div>
-        <div class="col-sm-4">
-          <!--<span class="glyphicon glyphicon-pencil"></span>-->
-          <img src="imags/expertise/2.png">
-            <h4 class="ex3">BRANDING IDENTITY</h4>
-              <p class="ex4">This is Photoshop's version of lorem<br>
-                 Ipsum. Proin gravida nibh vel velit<br>
-                 auctor aliquet Aenean </p>
-        </div>
-        <div class="col-sm-4">
-          <!--<span class="glyphicon glyphicon-phone"></span>-->
-          <img src="imags/expertise/3.png">
-            <h4 class="ex3">MOBILE APP</h4>
-              <p class="ex4">This is Photoshop's version of lorem<br>
-                 Ipsum. Proin gravida nibh vel velit<br>
-                 auctor aliquet Aenean </p>
-        </div>
-      </div>
-      <br><div class="exdivider"></div>
-      <br><br>
-      <div class="row slideanim">
-        <div class="col-sm-4">
-          <!--<span class="glyphicon glyphicon-search"></span>-->
-          <img src="imags/expertise/4.png">
-            <h4 class="ex3">SEARCH ENGINE OPTIMIZATION</h4>
-              <p class="ex4">This is Photoshop's version of lorem<br>
-                 Ipsum. Proin gravida nibh vel velit<br>
-                 auctor aliquet Aenean </p>
-        </div>
-        <div class="col-sm-4">
-          <!--<span class="glyphicon glyphicon-king"></span>-->
-          <img src="imags/expertise/5.png">
-            <h4 class="ex3">GAME DEVELOPMENT</h4>
-              <p class="ex4">This is Photoshop's version of lorem<br>
-                 Ipsum. Proin gravida nibh vel velit<br>
-                 auctor aliquet Aenean </p>
-        </div>
-        <div class="col-sm-4">
-          <!--<span class="glyphicon glyphicon-heart-empty"></span>-->
-          <img src="imags/expertise/6.png">
-            <h4 class="ex3">MADE WITH LOVE</h4>
-              <p class="ex4">This is Photoshop's version of lorem<br>
-                 Ipsum. Proin gravida nibh vel velit<br>
-                 auctor aliquet Aenean </p>
-        </div>
-      </div>
-    </div>
-    <br><br><br>
-
-
-
-    <!--meet our amazing team-->
-    <div id="teams" class="container-fluid text-center bgovr11">
-      <br><br><br>
-      <h3 class="tm1">MEET OUR AMAZING TEAM</h3>
-      <h4 class="tm2">Lorem ipsum dolor sit amet proin gravida nibh vel velit</h4>
-      <br>
-      <div class="edivider container"></div>
-      <br><br>
-      <div class="row text-center row11"> <!-- style="padding-left: 200px; padding-right: 200px;"  -->
-        <div class="col-sm-3 col-md-3">
-          <div class="thumbnail">
-            <img src="imags/team/logo11.png" alt="imag1" width="400" height="300">
-              <div class="teamtext">
-                <h3 class="tm3">SEMF UCUK</h3>
-                <p class="tm4">ENGINEERING</p>
-              </div>
+        <div class="col-md-4 mb-3">
+          <div class="card p-3">
+            <h5>HTML & CSS</h5>
+            <p>Responsive layouts, CSS Grid, Flexbox, Bootstrap</p>
           </div>
         </div>
-        <div class="col-sm-3 col-md-3">
-          <div class="thumbnail">
-            <img src="imags/team/logo11.png" alt="imag1" width="400" height="300">
-            <div class="teamtext">
-              <h3 class="tm3">SEMF UCUK</h3>
-              <p class="tm4">ENGINEERING</p>
-            </div>
+        <div class="col-md-4 mb-3">
+          <div class="card p-3">
+            <h5>JavaScript</h5>
+            <p>ES6+, DOM Manipulation, jQuery, React</p>
           </div>
         </div>
-        <div class="col-sm-3 col-md-3">
-          <div class="thumbnail">
-            <img src="imags/team/logo11.png" alt="imag1" width="400" height="300">
-            <div class="teamtext">
-              <h3 class="tm3">SEMF UCUK</h3>
-              <p class="tm4">ENGINEERING</p>
-            </div>
-          </div>
-        </div>        
-        <div class="col-sm-3 col-md-3">
-          <div class="thumbnail">
-            <img src="imags/team/logo11.png" alt="imag1" width="400" height="300">
-            <div class="teamtext">
-              <h3 class="tm3">SEMF UCUK</h3>
-              <p class="tm4">ENGINEERING</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <h4 class="tm5">Become part of our dream team, let's join us!</h4> 
-      <button type="button" class="btn btn-primary btn-lg button1 button3"><b>WE ARE HIRING</b></button><br><br><br><br>
-    </div>
-
-
-
-    <!--Our Works-->
-    <div id="ourWork" class="container-fluid text-center ourwrk">
-    <br><br>       
-      <div> 
-        <div><h3 class="ow1">OUR WORKS</h3>
-          <div align="right"><a href=""><p class="ow2">See All Projects in the dribble <span class="glyphicon glyphicon-chevron-right"></span></p></a></div>
-        </div>
-      </div>
-      <br><br><br>
-      <div class="row imags no-gutter">
-        <div class="col-sm-6 col-md-2">
-          <a href="imags/lightbox/events1.jpg" data-lightbox="project1">
-            <img src="imags/lightbox/event1.jpg" alt="img1" class="img-responsive">
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-2">
-          <a href="imags/lightbox/events2.png" data-lightbox="project1">
-            <img src="imags/lightbox/event2.png" alt="img1" class="img-responsive">
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-2">
-          <a href="imags/lightbox/events3.png" data-lightbox="project1">
-            <img src="imags/lightbox/event3.png" alt="img1" class="img-responsive">
-          </a> 
-        </div>
-        <div class="col-sm-6 col-md-2">
-          <a href="imags/lightbox/events1.jpg" data-lightbox="project1">
-            <img src="imags/lightbox/event1.jpg" alt="img1" class="img-responsive">
-          </a> 
-        </div>
-        <div class="col-sm-6 col-md-2">
-          <a href="imags/lightbox/events2.png" data-lightbox="project1">
-            <img src="imags/lightbox/event2.png" alt="img1" class="img-responsive">
-          </a>
-        </div> 
-        <div class="col-sm-6 col-md-2">
-          <a href="imags/lightbox/events3.png" data-lightbox="project1">
-            <img src="imags/lightbox/event3.png" alt="img1" class="img-responsive">
-          </a> 
-        </div>
-      </div>
-      <div class="row imags no-gutter">
-        <div class="col-sm-6 col-md-2">
-          <a href="imags/lightbox/events3.png" data-lightbox="project1">
-            <img src="imags/lightbox/event3.png" alt="img1" class="img-responsive">
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-2">
-          <a href="imags/lightbox/events1.jpg" data-lightbox="project1">
-            <img src="imags/lightbox/event1.jpg" alt="img1" class="img-responsive">
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-2">
-          <a href="imags/lightbox/events2.png" data-lightbox="project1">
-            <img src="imags/lightbox/event2.png" alt="img1" class="img-responsive">
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-2">
-          <a href="imags/lightbox/events3.png" data-lightbox="project1">
-            <img src="imags/lightbox/event3.png" alt="img1" class="img-responsive">
-          </a>
-        </div>
-        <div class="col-sm-6 col-md-2">
-          <a href="imags/lightbox/events1.jpg" data-lightbox="project1">
-            <img src="imags/lightbox/event1.jpg" alt="img1" class="img-responsive">
-          </a>
-        </div> 
-        <div class="col-sm-6 col-md-2">
-          <a href="imags/lightbox/events2.png" data-lightbox="project1">
-            <img src="imags/lightbox/event2.png" alt="img1" class="img-responsive">
-          </a>
-        </div>
-      </div>
-      <br><br>
-      <button type="button" class="btn btn-primary btn-lg button1 button2"><b>LOAD MORE</b></button><br>
-    </div>
-    <br><br><br><br>
-    
-    <!--testimonials -->
-    <!--<div class="container-fluid pplsay" id="testimonials" style="background-image: url(imags/testimonials/pplsay.png);width: 100%;height: auto;">
-    <br><br>
-      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-        // Indicators 
-        <ol class="carousel-indicators carousel-indicators1">
-          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-        </ol>
-        // Wrapper for slides 
-        <div class="carousel-inner carousel-inner1" role="listbox">
-          <div class="item active">
-            <img src="imags/testimonials/img1.png" alt="img1">
-            <div class="carousel-caption caption11">
-              <p class="tns1">“</p>
-              <p class="tns2">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean 
-              sollicitudin,lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. </p><br>
-              <p><strong class="tns3">JANE GALADRIEL</strong></p>
-              <p class="tns4">CEO TENGKUREP</p><br><br><br><br><br><br><br>
-            </div>
-          </div>
-          <div class="item ">
-            <img src="imags/testimonials/img1.png" alt="img2" width="660" height="345">
-            <div class="carousel-caption caption11">
-              <p class="tns1">“</p><br>
-              <p class="tns2">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. </p><br>
-              <p><strong class="tns3">JANE GALADRIEL</strong></p>
-              <p class="tns4">CEO TENGKUREP</p><br><br><br><br><br><br><br>
-            </div>
-          </div>
-          <div class="item ">
-            <img src="imags/testimonials/img1.png" alt="img1" width="660" height="345">
-            <div class="carousel-caption caption11">
-              <p class="tns1">“</p><br>
-              <p class="tns2">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. </p><br>
-              <p><strong class="tns3">JANE GALADRIEL</strong></p>
-              <p class="tns4">CEO TENGKUREP</p><br><br><br><br><br><br><br>
-            </div>
-          </div>
-          <div class="item ">
-            <img src="imags/testimonials/img1.png" alt="img2" width="660" height="345">
-            <div class="carousel-caption caption11">
-              <p class="tns1">“</p><br>
-              <p class="tns2">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. </p><br>
-              <p><strong class="tns3">JANE GALADRIEL</strong></p>
-              <p class="tns4">CEO TENGKUREP</p><br><br><br><br><br><br><br>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-
-    <!--contact -->
-    <div id="contact" class="container"> 
-      <br><br><br>      
-      <div class="row">
-        <div class="col-sm-6 contacts11">
-          <h3 class="ct1">GIVE US THE GOOD NEWS </h3>
-          <br>
-          <form>
-            <div class="form-group">
-              <input type="text" class="form-control" id="name" placeholder="Name"><br>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" id="email" placeholder="Email"><br>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" id="subject" placeholder="Subject"><br>
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" rows="9" id="Message" placeholder="Message"></textarea>
-            </div>
-          </form>
-          <button type="button" class="btn btn-primary btn-lg button1 button3"><b>SUBMIT</b></button><br><br><br><br>
-        </div>
-        <div class="col-sm-6">
-          <h3 class="ct1">&nbsp OUR HAPPY CLIENT</h3>
-          <br>
-          <div class="row cont_logo">
-            <div class="col-sm-6">
-              <div class="thumbnail thumblogo"><img src="imags/contact/zara.png" alt="img1" class="img-responsive"><br></div>
-              <div class="thumbnail thumblogo"><img src="imags/contact/ny.png" alt="img1" class="img-responsive"><br></div>
-              <div class="thumbnail thumblogo"><img src="imags/contact/klein.png" alt="img1" class="img-responsive"><br></div>
-              <div class="thumbnail thumblogo"><img src="imags/contact/converse.png" alt="img1" class="img-responsive"><br></div>
-              <div class="thumbnail thumblogo"><img src="imags/contact/levis.png" alt="img1" class="img-responsive"><br></div>
-            </div>
-            <div class="col-sm-6">
-              <div class="thumbnail thumblogo"><img src="imags/contact/mango.png" alt="img1" class="img-responsive"><br></div>
-              <div class="thumbnail thumblogo"><img src="imags/contact/gucci.png" alt="img1" class="img-responsive"><br></div>
-              <div class="thumbnail thumblogo"><img src="imags/contact/nike.png" alt="img1" class="img-responsive"><br></div>
-              <div class="thumbnail thumblogo"><img src="imags/contact/puma.png" alt="img1" class="img-responsive"><br></div>
-              <div class="thumbnail thumblogo"><img src="imags/contact/Billabong.png" alt="img1" class="img-responsive"><br></div>
-            </div>
+        <div class="col-md-4 mb-3">
+          <div class="card p-3">
+            <h5>UI/UX</h5>
+            <p>Wireframing, Figma, Adobe XD, Design Systems</p>
           </div>
         </div>
       </div>
     </div>
+  </section>
 
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <ul>
+        <li><strong>Portfolio Website:</strong> Personal branding site showcasing projects and skills.</li>
+        <li><strong>eCommerce Platform:</strong> Built a modern online store using React and Firebase.</li>
+        <li><strong>Admin Dashboard:</strong> Responsive dashboard for managing users and analytics.</li>
+      </ul>
+    </div>
+  </section>
 
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p><strong>Email:</strong> john.doe@example.com</p>
+      <p><strong>Phone:</strong> +91 98765 43210</p>
+      <p><strong>LinkedIn:</strong> linkedin.com/in/johndoe</p>
+    </div>
+  </section>
 
+  <footer>
+    &copy; 2025 John Doe. All rights reserved.
+  </footer>
 
+</body>
 
-    <!--footer-->
-    <footer class="container-fluid">
-      <br><br><br>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-4">   
-            <img src="imags/footer/tajam.png"> <br><br>
-            <p class="ft2">lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh elit. Duis sed odio sit amet auctror a ornare odio non mauris vitae erat in elit</p>  
-          </div>
-          <div class="col-sm-4">
-            <h3 class="ft1">OUR STUDIO</h3>
-            <p class="ft3"><span class="glyphicon glyphicon-map-marker" aria-hidden:"true">&nbspRuko cucruk, Jl. Radio luar dalem jos No.12 - 13,  Kalideres - Jakarta Barat 11480 - Indonesia
-            </span></p><br>
-            <p class="ft4"><i class="fa fa-phone" aria-hidden="true"> &nbsp  (+62) 21-2224 3333</i></p>
-          </div> 
-          <div class="col-sm-4">
-            <h3 class="ft1">STAY IN TOUCH</h3>
-            <div class="form-group">
-              <input type="text" class="form-control form-control1" id="name" placeholder="Subscribe our newsletter"><br>
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                </span>
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                </span>
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-dribbble fa-stack-1x fa-inverse"></i>
-                </span>
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-                </span>
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
-                </span>
-                <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-youtube-play fa-stack-1x fa-inverse"></i>
-                </span>
-            </div>
-          </div>
-        </div><br><br>
-        <div class="row">
-          <div class="col-sm-5">
-            <p class="ft5">HELP &nbsp &nbsp &nbsp TERMS & CONDITION &nbsp &nbsp &nbsp PRIVACY</p>
-          </div>
-          <div class="col-sm-5">
-            <p class="ft6">Copyright © 2018 - Template</p>
-          </div>
-        </div>
-    </footer>
-
-
-
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="lightbox/dist/js/lightbox.js"></script>
-      <script>
-        lightbox.option({
-          'resizeDuration': 200,
-          'wrapAround': true,
-          'disableScrolling':false,
-        })
-      </script>
-      <script>
-          $('.video').parent().click(function () {
-            if($(this).children(".video").get(0).paused){
-              $(this).children(".video").get(0).play();
-              $(this).children(".playpause").fadeOut();
-            }else{
-              $(this).children(".video").get(0).pause();
-              $(this).children(".playpause").fadeIn();
-            }
-          });
-
-          $('li').on('click', function(){
-          $('li').removeClass('active');
-          $(this).toggleClass('active');
-          });
-    </script>
-    <!-- Scrolling Nav JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/scrolling-nav.js"></script>
-  </body>
 </html>
